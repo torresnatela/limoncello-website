@@ -1,0 +1,207 @@
+.section {
+  background: var(--cream-2);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.prods {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(18px, 3vw, 26px);
+}
+
+@media (min-width: 640px) {
+  .prods {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.prod {
+  border: 1px solid var(--line);
+  background: var(--cream);
+  padding: clamp(18px, 3.4vw, 26px);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: clamp(14px, 3vw, 22px);
+  align-items: center;
+}
+
+.prodImg {
+  width: clamp(64px, 16vw, 84px);
+  height: auto;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.name {
+  font-family: var(--f-disp);
+  font-size: clamp(20px, 3.6vw, 24px);
+  line-height: 1;
+}
+
+.spec {
+  font-family: var(--f-ui);
+  font-size: 10.5px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.price {
+  font-family: var(--f-ui);
+  font-size: clamp(17px, 3vw, 19px);
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.qty {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  border: 1px solid var(--line);
+  width: max-content;
+  background: #fff;
+}
+
+.qty button {
+  font-family: var(--f-ui);
+  font-size: 19px;
+  line-height: 1;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.qty button:hover:not(:disabled) {
+  background: var(--cream-2);
+}
+
+.qty button:disabled {
+  color: var(--line);
+  cursor: default;
+}
+
+.qty button:focus-visible {
+  outline: 2px solid var(--gold-dk);
+  outline-offset: -2px;
+}
+
+.qty output {
+  font-family: var(--f-ui);
+  font-size: 16px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  min-width: 38px;
+  text-align: center;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  margin-top: clamp(24px, 4vw, 32px);
+  padding-top: 20px;
+  border-top: 1px solid var(--ink);
+}
+
+.lbl {
+  font-family: var(--f-ui);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.val {
+  font-family: var(--f-disp);
+  font-size: clamp(28px, 6vw, 38px);
+  font-variant-numeric: tabular-nums;
+}
+
+.hint {
+  font-family: var(--f-ui);
+  font-size: 13px !important;
+  color: var(--ink-3);
+  margin-top: 12px;
+  line-height: 1.6;
+}
+
+.btnRow {
+  margin-top: clamp(20px, 3.5vw, 26px);
+}
+
+/* Desktop: botão não precisa ocupar 1080px de largura */
+@media (min-width: 820px) {
+  .btnRow {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .btnRow :global(.btn) {
+    width: auto;
+    min-width: 360px;
+  }
+}
+
+/* ---------- barra fixa ---------- */
+.bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 40;
+  background: var(--navy-deep);
+  border-top: 1px solid rgba(192, 160, 90, 0.3);
+  padding: 12px var(--pad);
+  padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+@media (min-width: 1140px) {
+  .bar {
+    padding-left: calc((100vw - 1080px) / 2 + var(--pad));
+    padding-right: calc((100vw - 1080px) / 2 + var(--pad));
+  }
+}
+
+.barText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.barText b {
+  font-family: var(--f-ui);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--cream);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.barText span {
+  font-family: var(--f-ui);
+  font-size: 11px;
+  color: #96958a;
+}
+
+.barBtn {
+  width: auto !important;
+  padding: 14px 20px !important;
+  font-size: 14.5px !important;
+  flex: none;
+}

@@ -1,0 +1,27 @@
+.serves {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: clamp(20px, 3.5vw, 34px);
+}
+
+.serve {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: clamp(20px, 3.5vw, 26px);
+  background: var(--cream-2);
+  border: 1px solid var(--line);
+}
+
+.t {
+  font-family: var(--f-body);
+  font-style: italic;
+  font-size: clamp(21px, 3.6vw, 25px);
+  color: var(--gold-dk);
+}
+
+.serve p {
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--ink-2);
+}

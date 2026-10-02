@@ -1,0 +1,87 @@
+.hero {
+  position: relative;
+  min-height: min(680px, 86vh);
+  min-height: min(680px, 86svh);
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: var(--navy-deep);
+}
+
+.img {
+  object-fit: cover;
+  object-position: 58% 38%;
+}
+
+.veil {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(13, 23, 41, 0.72) 0%,
+    rgba(13, 23, 41, 0.28) 34%,
+    rgba(13, 23, 41, 0.86) 82%,
+    rgba(13, 23, 41, 0.96) 100%
+  );
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 var(--pad) clamp(38px, 7vw, 64px);
+  color: var(--cream);
+}
+
+.sm {
+  font-family: var(--f-ui);
+  font-size: clamp(10px, 2.6vw, 13px);
+  font-weight: 600;
+  letter-spacing: 0.44em;
+  text-transform: uppercase;
+  color: var(--gold-br);
+}
+
+.lg {
+  font-family: var(--f-disp);
+  font-weight: 400;
+  font-size: clamp(44px, 13vw, 88px);
+  line-height: 0.98;
+  letter-spacing: 0.03em;
+  margin-top: 6px;
+}
+
+.sub {
+  font-family: var(--f-ui);
+  font-size: clamp(11px, 2.8vw, 14px);
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #e4ddcb;
+  margin-top: 12px;
+}
+
+.line {
+  font-style: italic;
+  font-size: clamp(21px, 5.4vw, 30px);
+  line-height: 1.28;
+  margin-top: clamp(22px, 4.5vw, 32px);
+  max-width: 17ch;
+  color: var(--cream);
+}
+
+.meta {
+  font-family: var(--f-ui);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #a5a497;
+  margin-top: 22px;
+}
+
+/* Em telas largas a imagem (retrato) recebe um pouco mais de altura */
+@media (min-width: 1024px) {
+  .hero {
+    min-height: min(760px, 88svh);
+  }
+}
