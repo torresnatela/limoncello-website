@@ -14,7 +14,7 @@ npm run build    # build de produção
 
 | O quê | Arquivo |
 | --- | --- |
-| Número do WhatsApp, domínio, e-mail, Instagram, produtos e preços | `src/lib/config.ts` |
+| Número do WhatsApp, domínio, e-mail, produtos e preços | `src/lib/config.ts` |
 | Texto da mensagem enviada ao WhatsApp | `src/lib/order.ts` |
 | Cores, fontes e espaçamentos (tokens) | `src/app/globals.css` |
 | Seções da página | `src/components/*` |
