@@ -11,7 +11,6 @@ export const WA_NUMBER = process.env.NEXT_PUBLIC_WA_NUMBER ?? "5531998661090";
 
 export const SITE_URL = "https://origini.bhz.br";
 export const EMAIL = "sac@origini.bhz.br";
-export const INSTAGRAM_URL = "https://www.instagram.com/";
 
 export const MAX_QTY = 99;
 

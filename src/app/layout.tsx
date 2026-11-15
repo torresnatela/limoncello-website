@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Archivo, Cinzel, EB_Garamond } from "next/font/google";
+import { AGE_GATE_SCRIPT, AgeGate } from "@/components/AgeGate";
 import { SITE_URL } from "@/lib/config";
 import "./globals.css";
 
@@ -40,8 +41,18 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="pt-BR" className={`${cinzel.variable} ${garamond.variable} ${archivo.variable}`}>
-      <body>{children}</body>
+    <html
+      lang="pt-BR"
+      className={`${cinzel.variable} ${garamond.variable} ${archivo.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: AGE_GATE_SCRIPT }} />
+      </head>
+      <body>
+        {children}
+        <AgeGate />
+      </body>
     </html>
   );
 }

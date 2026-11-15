@@ -1,4 +1,4 @@
-import { EMAIL, INSTAGRAM_URL } from "@/lib/config";
+import { EMAIL } from "@/lib/config";
 import { waLink } from "@/lib/order";
 import styles from "./Footer.module.css";
 
@@ -27,11 +27,6 @@ export function Footer() {
               <li>
                 <a href={waLink("Olá! Vim pelo site do Ritorno alle Origini.")} target="_blank" rel="noopener">
                   WhatsApp
-                </a>
-              </li>
-              <li>
-                <a href={INSTAGRAM_URL} target="_blank" rel="noopener">
-                  Instagram
                 </a>
               </li>
             </ul>
